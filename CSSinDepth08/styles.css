@@ -1,0 +1,4 @@
+:root {
+  box-sizing: border-box;
+  font-size: calc(1vw + 0.6em); /* Base font size scales slightly with the viewport. */
+}
