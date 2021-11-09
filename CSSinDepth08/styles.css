@@ -34,11 +34,23 @@ a:active {
   background-color: #fff;
 }
 
+@media (min-width: 35em) {
+  .page-header {
+    padding: 1em; /* Increase header padding */
+  }
+}
+
 .title > h1 {
   color: #333;
   text-transform: uppercase;
   font-size: 1.5rem;
   margin: 0.2em 0;
+}
+
+@@media (min-width: 35em) { /* Targets breakpoints above 35 em */
+  .title > h1 {
+    font-size: 2.25rem; /* Overrides the mobile font size (1.5 rem) with a larger one */
+  }
 }
 
 .slogan {
@@ -56,8 +68,21 @@ a:active {
   text-shadow: 0.1em 0.1em 0.3em #000; /* A dark text shadow helps light text remain readable */
 }                                      /* in front of complex background. */
 
+@media (min-width: 35em) {
+  .hero {
+    padding: 5em 3em; /*Increases hero image padding and font size. */
+    font-size: 1.2rem;
+  }
+}
+
 main {
   padding: 1em;
+}
+
+@media (min-width: 35em) {
+  main {
+    padding: 2em 1em; /* Increases padding on main */
+  }
 }
 
 .subtitle {
@@ -127,4 +152,50 @@ main {
   padding: 0.8em 1em; /* Uses a healthy amount of padding to ensure a large clickable area. */
   color: #fff;
   font-weight: normal;
+}
+
+@media (min-width: 35em) {
+  .menu-toogle {
+    display: none; /* Hides toggle button and reveals the dropdown contents */
+  }
+
+  .menu-dropdown {
+    display: block; /* Hides toggle button and reveals the dropdown contents */
+    position: static; /* Overrides absolute positioning */
+  }
+}
+
+@media (min-width: 35em) {
+  .nav-menu {
+    display: flex;
+    border: 0;
+    padding: 0 1em;
+  }
+
+  .nav-menu > li {
+    flex: 1;
+  }
+
+  .nav-menu > li + li {
+    border: 0;
+  }
+
+  .nav-menu > li > a {
+    padding: 0.3em;
+    text-align: center;
+  }
+}
+
+@media (min-width: 35em) {
+  .row {
+    display: flex;
+    margin-left: -.75em; /* Use negative margins to widen the row container to compensate */
+    margin-right: -.75em; /* for column margins (chapter 4, section 4.5.2) */
+  }
+
+  .column {
+    flex: 1;
+    margin-right: 0.75em; /* Adds column gutters */
+    margin-left: 0.75em;
+  }
 }
