@@ -3,6 +3,12 @@
   font-size: calc(1vw + 0.6em); /* Base font size scales slightly with the viewport. */
 }
 
+@media (min-width: 50em) {
+  :root {
+    font-size: 1.125em; /*Applies a non-scaling font size above the highest breakpoint. */
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -34,9 +40,9 @@ a:active {
   background-color: #fff;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 50em) {
   .page-header {
-    padding: 1em; /* Increase header padding */
+    padding: 1em 4em; /* Increase header padding */
   }
 }
 
@@ -68,10 +74,9 @@ a:active {
   text-shadow: 0.1em 0.1em 0.3em #000; /* A dark text shadow helps light text remain readable */
 }                                      /* in front of complex background. */
 
-@media (min-width: 35em) {
+@media (min-width: 50em) {
   .hero {
-    padding: 5em 3em; /*Increases hero image padding and font size. */
-    font-size: 1.2rem;
+    padding: 7em 6em; /*Increases hero image padding and font size. */
   }
 }
 
@@ -79,9 +84,9 @@ main {
   padding: 1em;
 }
 
-@media (min-width: 35em) {
+@media (min-width: 50em) {
   main {
-    padding: 2em 1em; /* Increases padding on main */
+    padding: 2em 4em; /* Increases padding on main */
   }
 }
 
@@ -165,11 +170,11 @@ main {
   }
 }
 
-@media (min-width: 35em) {
+@media (min-width: 50em) {
   .nav-menu {
     display: flex;
     border: 0;
-    padding: 0 1em;
+    padding: 0 4em;
   }
 
   .nav-menu > li {
